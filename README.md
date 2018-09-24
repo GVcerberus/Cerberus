@@ -1,2 +1,3 @@
 # Cerberus
-I dont feel like giving it a name yet.
+
+This is my cheat code base :P
