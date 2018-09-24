@@ -1,0 +1,120 @@
+syntax on           " enable syntax processing
+
+colo dracula
+set tabstop=2           " number of visual spaces per TAB
+set softtabstop=2       " number of spaces in tab when editing
+set expandtab           " tabs are spaces
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+
+set showmatch           "show matching brackets
+
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+set backspace=indent,eol,start
+
+set syntax=amadeuslogs
+
+set encoding=utf-8      " required for YouCompleteMe
+"Folding
+"set foldlevelstart=10   " open most folds by default
+"set foldnestmax=10      " 10 nested fold max
+"set foldmethod=indent   " fold based on indent level
+
+"filetype indent on      " load filetype-specific indent files
+
+
+"Source .vimrc from the working directory.
+set exrc
+
+"let &path.="src/include,/usr/include/AL,"  For include files
+
+
+" Vim Plug Manager - starts
+call plug#begin('~/.vim/plugmanager')
+
+" - You complete me babe :P
+Plug 'https://github.com/Valloric/YouCompleteMe.git'
+" - Fuzzy File Search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" - Nerd Tree.
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'morhetz/gruvbox'
+
+
+
+
+call plug#end()
+" Vim Plug Manager - ends
+
+"////////////////////////////  Key-Mappings  ////////////////////////////////////////////
+"augroup filetype_html
+"    autocmd!
+"        autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+"augroup END
+
+
+
+
+
+
+
+
+" Leader
+let mapleader = "-"
+
+" Auto Commands.
+autocmd VimEnter * set tags+=/remote/tmp/users_workplace/gverma/workspace/tags2/tags
+autocmd VimEnter * echom "Cerberus Dev"
+
+" always save .gv extension
+autocmd BufNewFile *.gv :write
+
+" Automatically indent
+autocmd BufWritePre *.html :normal gg=G
+
+" Key Mappings
+noremap <c-d> dd
+noremap <space> viw
+map ; :Files<CR>
+
+map <C-o> :NERDTreeToggle<CR>
+
+" Figure out copying an entire line, pasting and entire line, cutting an
+" entireline  nnoremap, vnoremap and inoremap,  for normal, visual and insert mode
+
+" Normal mode noremappings
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+nnoremap <leader>dq viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>sq viw<esc>a'<esc>bi'<esc>lel
+nnoremap <leader>fj :%!python -m json.tool<cr>
+
+
+" Visual mode noremappings
+noremap <c-u> <space>U
+
+
+" Insert mode noremappings
+"  Control U for UpperCase
+"  Control L for Lowercase.
+" May be for quotes or brackets
+
+
+
+" Non recursive noremappings  norenoremap
+
+
+" :nnoremap -d dd
+
+" :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" :nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"////////////////////////////  Abbreviations  ////////////////////////////////////////////
+iabbrev waht what
+iabbrev gvmail burnitcerberus@gmail.com
+iabbrev cerb   CERBERUS
