@@ -1,0 +1,15 @@
+[http]
+	sslVerify = false
+[user]
+	email = gaurav.verma@amadeus.com
+	name = Gaurav VERMA
+[core]
+   pager = less
+   editor = /usr/bin/vim
+#[diff]
+#   tool = vimdiff
+#[merge]
+#   tool = vimdiff
+#[color]
+#   diff = true 
+#   grep = true
