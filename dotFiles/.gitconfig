@@ -1,7 +1,7 @@
 [http]
 	sslVerify = false
 [user]
-	email = gaurav.verma@amadeus.com
+	email = burnitcerberus@gmail.com
 	name = Gaurav VERMA
 [core]
    pager = less
@@ -10,6 +10,19 @@
 #   tool = vimdiff
 #[merge]
 #   tool = vimdiff
-#[color]
-#   diff = true 
-#   grep = true
+[color]
+  diff = true
+  status = true
+  branch = true
+  interactive = true
+  grep = true
+  ui = true
+  pager = true
+
+[color "status"]
+  added = green
+  changed = red bold
+  untracked = magenta bold
+
+[color "branch"]
+  remote = yellow
