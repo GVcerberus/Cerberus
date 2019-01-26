@@ -34,10 +34,8 @@ ADD bin ~/bin
 
 COPY dotfiles/.* /root/
 
-RUN source /root/.zshrc
-
 RUN vim +PlugInstall +qall 
 
-ENV HOST Cerberus-v1
+ENV HOST Cerberus-Gv1
 
 # install docker client and ssh

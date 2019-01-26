@@ -95,6 +95,4 @@ plugins=(
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #
-export PS1=${(j::Q)${(Z:Cn:):-$'%F{cyan}[%f%(!.%F{red}%n%f.%F{red}%n%f)%F{red}@%f${p_host}%F{cyan}][%f%F{blue}%~%f%F{cyan}]%f%(!.%F{red}%#%f.%F{green}%#%f)" "'}}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
