@@ -26,16 +26,20 @@ RUN zypper --non-interactive install java \
 
 ENV JAVA_HOME /usr/bin/java
 
-# Set Up Vim Plugins
-RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 ADD bin ~/bin
 
 COPY dotfiles/.* /root/
 
-RUN vim +PlugInstall +qall 
+RUN chsh -s /usr/bin/zsh
 
-ENV HOST Cerberus-Gv1
+RUN cd $HOME && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+   && git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
-# install docker client and ssh
+# Set Up Vim Plugins
+RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+RUN vim +PlugInstall +qall
+
+ENV HOST cerberus-gv
+
