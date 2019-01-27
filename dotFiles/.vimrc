@@ -41,7 +41,7 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 Plug 'https://github.com/airblade/vim-gitgutter'
 " Vim Surround
 Plug 'https://github.com/tpope/vim-surround.git'
-
+Plug 'https://github.com/shime/vim-livedown.git'
 call plug#end()
 " ////////////////////////////////////////////////////////
 
@@ -55,6 +55,7 @@ noremap <leader>f /
 noremap <space> viw
 map ; :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
+map <C-m> :LivedownPreview<CR>
 " Format Json
 nnoremap <leader>fj :%!python -m json.tool<cr>
 " Add Timestamp
@@ -70,6 +71,10 @@ let g:clang_format#auto_format=1
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 " Git - Gutter
 let g:gitgutter_terminal_reports_focus=0
+" Livedown"
+let g:livedown_autorun = 0
+let g:livedown_open = 1
+let g:livedown_port = 1337
 
 "////////////////////////////  Abbreviations  ////////////////////////////////////////////
 iabbrev waht what
