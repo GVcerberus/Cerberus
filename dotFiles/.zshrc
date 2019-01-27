@@ -2,7 +2,7 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
-prompt pure 
+prompt suse
 
 export TERM=xterm-256color
 
