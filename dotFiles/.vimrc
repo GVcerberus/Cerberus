@@ -42,6 +42,10 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 " Vim Surround
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/shime/vim-livedown.git'
+Plug 'tomtom/tcomment_vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " distraction-free writing
+Plug 'junegunn/limelight.vim', { 'on': 'Limelight' } " focus tool. Good for presenting with vim
+
 call plug#end()
 " ////////////////////////////////////////////////////////
 
